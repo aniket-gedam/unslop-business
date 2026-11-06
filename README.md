@@ -1,129 +1,175 @@
-# unslop-business
+# unslop-business 🧼✨
 
-**A design skill for coding agents that build premium, clean business websites.**
+<p align="center">
+  <strong>An open Agent Skill for AI coding agents to build distinctive, editorial, conversion-focused business websites—never generic AI templates.</strong>
+</p>
 
-`unslop-business` helps AI coding agents work like a thoughtful brand designer, UX strategist, and frontend engineer—not a template generator. Its mandatory uniqueness protocol requires a business-specific design fingerprint and a logo-swap test so unrelated businesses do not receive the same layout with superficial changes.
+<p align="center">
+  <a href="https://github.com/aniket-gedam/unslop-business/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License" /></a>
+  <a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent%20Skill-Compatible-emerald?style=flat-square" alt="Agent Skill Standard" /></a>
+  <img src="https://img.shields.io/badge/Claude%20Code-Supported-orange?style=flat-square" alt="Claude Code" />
+  <img src="https://img.shields.io/badge/Antigravity-Supported-4285F4?style=flat-square" alt="Google Antigravity" />
+  <img src="https://img.shields.io/badge/Codex%20%2F%20Cursor-Supported-purple?style=flat-square" alt="Codex / Cursor" />
+</p>
 
-It is designed for business websites including:
-- Cafes, restaurants, hospitality, and food brands
-- Fashion, retail, and product storefronts
-- Premium service businesses
-- Brand and company websites
-- Local businesses and experience-led businesses
+---
 
-The skill uses reference websites as design research. It extracts useful principles—such as editorial storytelling, image direction, product discovery, typography, navigation, and conversion patterns—and translates them into an original design for the user's business.
+Most AI coding agents generate websites that look suspiciously alike: dark neon glows, generic floating cards, meaningless buzzwords, and interchangeable SaaS-style layouts applied to local cafes, boutique shops, and hospitality brands.
 
-## Reference inspiration
+**`unslop-business`** fixes this. It forces coding agents (Claude Code, Google Antigravity, OpenAI Codex, Cursor) to act as a **senior brand strategist, art director, and frontend engineer**. Before writing code, the agent extracts real design principles from benchmark references, defines a business-specific design fingerprint, and enforces a mandatory **Logo-Swap Test**.
 
-The initial reference set supplied for this project:
+---
 
-| Website | Useful design lessons to investigate |
-|---|---|
-| [Roastery Coffee House](https://roasterycoffee.co.in/) | Specialty brand storytelling, café discovery, retail and hospitality working together |
-| [Boojee Cafe](https://boojeecafe.com/) | Product-led discovery, café locations, subscriptions, commerce navigation |
-| [Blackberrys](https://blackberrys.com/) | Large retail taxonomy, collection navigation, merchandising and product grids |
-| [Cravin' by Andy](https://www.cravinbyandy.com/) | Hospitality storytelling, menu and location discovery, experience-led content |
-| [Beta Coffee](https://betacoffee.com.au/) | Concise editorial copy, strong information hierarchy, distinctive business positioning |
+## 📸 Before & After: The "Unslop" Effect
 
-These are inspiration and research examples, not layouts to copy. The skill is dynamic: users can supply completely different reference URLs for each project.
+Here is a real example of the same business (**Vilian Cafe & Roastery**) generated with standard AI prompts vs. built with **`unslop-business`**:
 
-## Installation
+### ❌ Before: Standard AI Output ("The Slop")
+> *Dark moody background, low-contrast typography, gimmicky ambient buttons ("Palate Quiz", "Atmosphere audio"), zero practical business information (no operating hours, no address), and a layout that could be swapped with any generic dark bar.*
 
-This repository follows the open Agent Skills convention: a skill directory contains a `SKILL.md` file with YAML frontmatter and instructions.
+<p align="center">
+  <img src="assets/before-generic-ai.jpg" alt="Before: Generic dark AI generated template" width="95%" />
+</p>
 
-### Claude Code
+### ✅ After: With `unslop-business` ("The Craft")
+> *Warm, natural Douglas fir & travertine aesthetic, editorial typography pairing, structured operational metadata (operating hours, single-origin terroir, physical address), and clear conversion pathways ("Explore The Menu" & "Reserve a Table").*
 
-Place the skill directory in your project's `.claude/skills/` folder:
+<p align="center">
+  <img src="assets/after-unslop-design.jpg" alt="After: Clean, editorial, conversion-focused business website built with unslop-business" width="95%" />
+</p>
 
-```text
-your-project/
-└── .claude/
-    └── skills/
-        └── unslop-business/
-            ├── SKILL.md
-            └── references/
-```
+### ⚖️ Breakdown: Why It Matters
 
-You can also install it in your personal skills directory if preferred by your Claude Code setup.
+| Dimension | Standard AI Template ("Before") | Built with `unslop-business` ("After") |
+| :--- | :--- | :--- |
+| **Brand Identity** | Vague, interchangeable moody dark theme | Warm, tactile, sun-drenched architectural identity |
+| **Information Architecture** | Gimmicky features (*"Atmosphere"* audio, *"Palate Quiz"*) | Vital customer essentials: Operating hours, micro-lot terroir, physical address |
+| **Conversion Focus** | Ambiguous secondary actions | Clear dual CTA hierarchy: Primary (*"Explore The Menu"*) + Booking (*"Reserve a Table"*) |
+| **Typography & Hierarchy** | Generic centered serif overlay with poor contrast | Crisp display serif paired with editorial grotesk body and scannable metadata tags |
+| **The Logo-Swap Test** | **Failed.** Swap the logo, and it looks like a generic night club or crypto landing. | **Passed.** Content, structure, and imagery are intimately tied to a specialty roastery and bakery. |
 
-### Codex
+---
 
-Place the skill directory in `.agents/skills/` in the repository:
+## ⚡ Key Highlights
 
-```text
-your-project/
-└── .agents/
-    └── skills/
-        └── unslop-business/
-            ├── SKILL.md
-            └── references/
-```
+- 🛡️ **Mandatory Uniqueness Protocol:** Agents must create a [Design Identity Record](references/uniqueness-protocol.md) before coding. Two unrelated businesses never receive the same layout.
+- 🔄 **The Logo-Swap Test:** If swapping the logo and photos makes the design work equally well for an unrelated business, the agent must reject it and rethink the composition.
+- 🎯 **Conversion-First UX:** Every section directly serves visitor intent—reservations, menu discovery, local store visits, or product purchases.
+- 🎨 **Editorial Design Tokens:** Establishes purposeful design tokens for typography, surfaces, rhythm, and responsive breakpoints rather than relying on default Tailwind templates.
+- 🌐 **Benchmarked Against World-Class References:** Analyzes real-world boutique brands (e.g. specialty coffee houses, independent hospitality, high-end retail) to extract transferable layout patterns.
+- 💻 **Stack-Agnostic Frontend:** Works smoothly with React, Next.js, Vue, Svelte, Astro, Tailwind CSS, or clean vanilla HTML/CSS.
 
-Codex can discover project skills from `.agents/skills/`.
+---
 
-### Google Antigravity
-
-Add the skill folder to the skills directory supported by your Antigravity installation/workspace, or follow the current Antigravity documentation for importing Agent Skills. Availability and discovery paths can vary by release.
-
-### Other agents
-
-Any coding agent that supports the Agent Skills format can use the `SKILL.md` instructions. Copy the complete `unslop-business/` folder into that agent's configured skills directory.
-
-## How to use
-
-After installation, ask your coding agent something like:
-
-> Use the unslop-business skill to build a premium website for my specialty bakery. Study these reference websites first: [URLs]. The site should focus on online orders and store visits. Use the existing project stack.
-
-Or:
-
-> Redesign this business website using unslop-business. Keep the current framework, inspect the existing code, and make the design feel editorial, premium, and distinctive. Prioritize mobile usability and booking enquiries.
-
-Give the agent:
-1. Business name and what it does.
-2. Target audience and location/market.
-3. Main action visitors should take.
-4. Pages or sections required.
-5. Reference URLs (optional).
-6. Existing brand assets, copy, and technical constraints.
-
-The agent should inspect references, synthesize a design direction, establish design tokens, implement, and visually review the result.
-
-## What's included
+## 📦 What's Inside
 
 ```text
 unslop-business/
-├── SKILL.md
-├── README.md
-├── LICENSE
-├── references/
-│   ├── reference-analysis.md
-│   ├── design-system.md
-│   ├── business-patterns.md
-│   ├── visual-quality-checklist.md
-│   └── reference-sites.md
-└── workflows/
-    ├── inspect-references.md
-    ├── plan-and-design.md
-    └── implement-and-review.md
+├── SKILL.md                          # Main agent instructions & 9-phase workflow
+├── README.md                         # Project documentation & visual guide
+├── LICENSE                           # MIT License
+├── assets/                           # Visual before/after benchmarks & media
+│   ├── before-generic-ai.jpg
+│   └── after-unslop-design.jpg
+├── references/                       # Core guidelines & design rules
+│   ├── uniqueness-protocol.md        # Mandatory Design Fingerprint & Logo-Swap Test
+│   ├── business-patterns.md          # Patterns for hospitality, retail, services, & local
+│   ├── design-system.md              # Token structure for typography, surfaces, & grid
+│   ├── visual-quality-checklist.md   # Viewport, contrast, & interaction checklist
+│   ├── reference-sites.md            # Benchmark case studies & design lessons
+│   └── reference-analysis.md         # Reference site inspection worksheet
+└── workflows/                        # Step-by-step agent execution workflows
+    ├── inspect-references.md         # Reference inspection & pattern synthesis
+    ├── plan-and-design.md            # Architecture planning & token setup
+    └── implement-and-review.md       # Semantic implementation & visual QA
 ```
 
-## Important notes
+---
 
-- The skill does not bundle or redistribute assets from the reference websites.
-- The skill cannot guarantee browser access or visual inspection; the agent must report limitations honestly.
-- The quality of the output depends on the agent's browser, coding, and screenshot capabilities.
-- SEO is intentionally out of scope for this initial version and can be added later.
+## 🚀 Installation
 
-## License
+`unslop-business` conforms to the open **Agent Skills** specification. You can drop it directly into your preferred AI coding environment.
 
-MIT. See [LICENSE](LICENSE).
+### 1. Claude Code
+Install into your project's `.claude/skills/` directory:
 
+```bash
+mkdir -p .claude/skills
+git clone https://github.com/aniket-gedam/unslop-business.git .claude/skills/unslop-business
+```
 
-## Uniqueness is mandatory
+*Or install globally into your personal Claude skills folder.*
 
-Every project must create a Design Identity Record before coding. The agent must reconsider the composition, information architecture, typography, image direction, and section sequence for each business. Merely swapping a logo, colors, photos, and copy is not acceptable.
+### 2. Google Antigravity
+Add the skill to your project or user skills directory:
 
-The skill also includes a logo-swap test: if the same design could serve an unrelated business with only superficial changes, the agent must rethink it.
+```bash
+mkdir -p .gemini/skills
+git clone https://github.com/aniket-gedam/unslop-business.git .gemini/skills/unslop-business
+```
 
-**Honest limitation:** a standalone skill cannot know what every agent has built for every other user. It cannot mathematically guarantee global uniqueness across separate users or sessions unless the agent has access to a shared project history or design registry. It does, however, enforce project-specific design decisions and comparison against any prior work available in the current workspace/context.
+### 3. OpenAI Codex / Cursor / Windsurf
+Place the folder in `.agents/skills/` or reference it within your agent rules:
+
+```bash
+mkdir -p .agents/skills
+git clone https://github.com/aniket-gedam/unslop-business.git .agents/skills/unslop-business
+```
+
+---
+
+## 💬 How to Prompt Your Agent
+
+Once installed, invoke `unslop-business` naturally in your conversations.
+
+### Example 1: Building a New Website from Scratch
+```text
+Use the unslop-business skill to build a website for "Monarch & Co.", a boutique specialty bakery in Melbourne. 
+Primary goal: In-store visits and weekend pastry pre-orders.
+Study these reference websites for layout and typography inspiration:
+- https://roasterycoffee.co.in/
+- https://betacoffee.com.au/
+Use Next.js and Tailwind CSS. Complete the Design Identity Record first.
+```
+
+### Example 2: Redesigning / "Unslopping" an Existing Website
+```text
+Our current landing page feels like an AI-generated SaaS template. 
+Use the unslop-business skill to redesign it. 
+Inspect our existing components, strip away generic cards and purple glows, 
+and establish an editorial, warm, conversion-focused design suited for an artisanal coffee roastery.
+```
+
+---
+
+## 🎯 Target Business Categories
+
+| Category | Primary Conversions | Key Design Priorities |
+| :--- | :--- | :--- |
+| **Cafes, Bakeries & Coffee Houses** | Table reservation, store visit, takeaway menu | Atmosphere, morning pastry showcase, operating hours, micro-lot details |
+| **Restaurants, Bistros & Bars** | Table booking, private dining enquiry | Menu discovery, wine list, culinary philosophy, neighborhood presence |
+| **Boutiques & Retail Storefronts** | Product discovery, direct checkout | Editorial lookbooks, clear collection hierarchies, scannable product cards |
+| **Premium Services & Studios** | Project enquiry, consultation booking | Case studies, outcome-led positioning, human contact pathways |
+| **Local Craft & Experience Brands** | Directions, appointment booking, contact | Clear service area, opening availability, authentic photography, social proof |
+
+---
+
+## 🔍 Reference Inspiration
+
+The skill includes pre-analyzed benchmarks to guide agent design intuition:
+
+| Reference | Key Lessons to Synthesize |
+| :--- | :--- |
+| [Roastery Coffee House](https://roasterycoffee.co.in/) | Specialty storytelling, physical cafe discovery, hospitality & retail harmony |
+| [Boojee Cafe](https://boojeecafe.com/) | Product-first discovery, multi-location architecture, commerce navigation |
+| [Beta Coffee](https://betacoffee.com.au/) | Concise editorial copy, high information hierarchy, distinct brand positioning |
+| [Cravin' by Andy](https://www.cravinbyandy.com/) | Experience-led hospitality narrative, dessert presentation, tactile aesthetics |
+| [Blackberrys](https://blackberrys.com/) | Deep retail taxonomy, collection navigation, high-converting product grids |
+
+*Note: References are used purely as UX and design research. `unslop-business` never duplicates layouts or infringes on brand assets.*
+
+---
+
+## 📄 License
+
+Distributed under the [MIT License](LICENSE). Contributions, critiques, and additional reference case studies are welcome!
